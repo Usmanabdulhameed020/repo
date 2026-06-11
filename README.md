@@ -1,154 +1,39 @@
-# Technical Design Document (TTD)
+# Internet Fundamentals Review Questions
 
-## Feature: Instagram Stories
+## 1. What is the Internet?
 
-### Overview
+The Internet is a global system of interconnected networks that allows computers and other devices to exchange data and communicate with each other.
 
-The Instagram Stories feature allows users to upload images and videos that automatically disappear after 24 hours. Users can view, react to, reply to, and delete their own stories.
+## 2. Explain the difference between the Internet and the World Wide Web.
 
----
+* **Internet:** The physical and virtual network infrastructure that connects devices around the world.
+* **World Wide Web (WWW):** A service that operates on the Internet and provides access to websites, web pages, and online resources through web browsers.
 
-## User Actions & System Responses
+## 3. What is the role of an ISP?
 
-### Upload Story
+An Internet Service Provider (ISP) supplies Internet connectivity and related services, enabling users to access online resources and communicate over the Internet.
 
-**User Action:** User clicks the Upload Story button.
+## 4. What is an IP address?
 
-**System Response:**
+An IP (Internet Protocol) address is a numerical label assigned to a device connected to a network, allowing it to send and receive data.
 
-* Open upload modal
-* Allow media selection
-* Display media preview
+## 5. What does DNS do?
 
-### Post Story
+The Domain Name System (DNS) converts human-readable domain names into IP addresses, making it easier for users to access websites.
 
-**User Action:** User clicks the Post Story button.
+## 6. Explain the difference between HTTP and HTTPS.
 
-**System Response:**
+* **HTTP (HyperText Transfer Protocol):** Used for transferring web pages and data over the Internet without encryption.
+* **HTTPS (HyperText Transfer Protocol Secure):** Uses encryption to protect data exchanged between users and websites, improving security and privacy.
 
-* Validate file
-* Upload media
-* Save story to database
-* Display success message
+## 7. Mention three benefits of the Internet.
 
-### View Story
+* Instant communication through email, messaging, and video calls.
+* Access to online learning materials and research resources.
+* Ability to perform online banking, shopping, and business transactions.
 
-**User Action:** User clicks a story avatar.
+## 8. List three Internet security best practices.
 
-**System Response:**
-
-* Open story viewer
-* Record story view
-* Start story timer
-
-### React to Story
-
-**User Action:** User clicks a reaction icon.
-
-**System Response:**
-
-* Save reaction
-* Notify story owner
-
-### Reply to Story
-
-**User Action:** User submits a reply.
-
-**System Response:**
-
-* Save message
-* Send notification to story owner
-
-### Delete Story
-
-**User Action:** User clicks the Delete Story button.
-
-**System Response:**
-
-* Delete media from storage
-* Remove story from database
-
----
-
-## Functional Requirements
-
-* Upload image stories
-* Upload video stories
-* View stories
-* React to stories
-* Reply to stories
-* Delete stories
-* Automatically remove stories after 24 hours
-
----
-
-## Database Structure
-
-### User Collection
-
-* `_id`
-* `username`
-* `profilePicture`
-
-### Story Collection
-
-* `_id`
-* `userId`
-* `mediaUrl`
-* `mediaType`
-* `createdAt`
-* `expiresAt`
-* `views`
-
----
-
-## API Endpoints
-
-### Create Story
-
-`POST /api/stories`
-
-### Get Stories
-
-`GET /api/stories`
-
-### View Story
-
-`POST /api/stories/:id/view`
-
-### React to Story
-
-`POST /api/stories/:id/react`
-
-### Reply to Story
-
-`POST /api/stories/:id/reply`
-
-### Delete Story
-
-`DELETE /api/stories/:id`
-
----
-
-## Technology Stack
-
-### Frontend
-
-* React.js
-
-### Backend
-
-* Node.js
-* Express.js
-
-### Database
-
-* MongoDB
-
-### Storage
-
-* Cloudinary / Firebase
-
-### Authentication
-
-* JWT
+* Keep software and operating systems updated.
+* Use strong and unique passwords for different accounts.
+* Be cautious when opening emails, links, or attachments from unknown sources.
